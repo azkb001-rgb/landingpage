@@ -157,9 +157,12 @@ const Home = () => {
         {/* Video Section */}
         <section className="px-4 pt-8 bg-gray-900">
           <div className="w-full max-w-sm mx-auto rounded-lg overflow-hidden shadow-2xl">
-            <div className="w-full h-auto rounded-lg bg-gray-800 aspect-video flex items-center justify-center">
-              <div className="text-gray-400">Video Player</div>
-            </div>
+            <wistia-player 
+              media-id="1k4qnksz3u" 
+              aspect="0.5625"
+              className="w-full h-auto rounded-lg"
+              style={{ outline: 'none' }}
+            />
           </div>
         </section>
 
