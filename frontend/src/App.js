@@ -137,7 +137,7 @@ const Home = () => {
           >
             <div className="flex items-center gap-2">
               <div className="w-2 h-2 bg-white rounded-full animate-pulse" />
-              <div className="text-sm font-semibold text-white">
+              <div className="text-sm font-semibold text-white notification-text">
                 <strong>{notification.name}</strong> de <strong>{notification.state}</strong><br />
                 acabou de comprar <strong>{notification.product}</strong>
               </div>
