@@ -178,22 +178,24 @@ body {
 /* Notification animation */
 .notification-slide-in {
   animation: slideInFromLeft 0.5s ease-out;
-  background: linear-gradient(135deg, #00ff88, #00cc6a);
+  background: rgba(20, 20, 20, 0.95);
   color: white;
-  border: 1px solid rgba(0, 255, 136, 0.5);
-  box-shadow: 0 4px 15px rgba(0, 255, 136, 0.3);
+  border: 2px solid rgba(0, 255, 136, 0.8);
+  box-shadow: 0 8px 32px rgba(0, 255, 136, 0.3);
+  backdrop-filter: blur(10px);
 }
 
 .notification-text {
   text-shadow: 
-    -1px -1px 0 #000,
-     1px -1px 0 #000,
-    -1px  1px 0 #000,
-     1px  1px 0 #000,
-    -1px  0px 0 #000,
-     1px  0px 0 #000,
-     0px -1px 0 #000,
-     0px  1px 0 #000;
+    0 0 5px rgba(0, 255, 136, 0.3),
+    0 0 10px rgba(0, 255, 136, 0.2);
+}
+
+.notification-slide-in:hover {
+  border-color: rgba(0, 255, 136, 1);
+  box-shadow: 0 12px 40px rgba(0, 255, 136, 0.4);
+  transform: translateY(-2px);
+  transition: all 0.3s ease;
 }
 
 @keyframes slideInFromLeft {
