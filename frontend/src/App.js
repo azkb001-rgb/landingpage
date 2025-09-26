@@ -115,17 +115,29 @@ const Home = () => {
   }, []);
 
   return (
-    <div className="flex flex-col min-h-screen bg-gray-900 text-white overflow-hidden">
+    <div className="flex flex-col min-h-screen bg-black text-white overflow-hidden">
+      {/* Animated particles background */}
+      <div className="particles">
+        <div className="particle"></div>
+        <div className="particle"></div>
+        <div className="particle"></div>
+        <div className="particle"></div>
+        <div className="particle"></div>
+        <div className="particle"></div>
+        <div className="particle"></div>
+        <div className="particle"></div>
+      </div>
+
       {/* Notifications */}
       <div className="fixed bottom-20 left-4 z-50 space-y-2">
         {notifications.map(notification => (
           <div
             key={notification.id}
-            className="notification-slide-in bg-green-500 text-white px-4 py-2 rounded-lg shadow-lg max-w-sm"
+            className="notification-slide-in px-4 py-2 rounded-lg shadow-lg max-w-sm"
           >
             <div className="flex items-center gap-2">
-              <div className="w-2 h-2 bg-white rounded-full animate-pulse" />
-              <div className="text-sm">
+              <div className="w-2 h-2 bg-black rounded-full animate-pulse" />
+              <div className="text-sm font-semibold">
                 <strong>{notification.name}</strong> de <strong>{notification.state}</strong><br />
                 acabou de comprar <strong>{notification.product}</strong>
               </div>
@@ -136,9 +148,9 @@ const Home = () => {
 
       {/* Header */}
       <header className="w-full">
-        <div className="w-full bg-red-600 text-white text-center font-bold py-2 px-4">
+        <div className="w-full bg-gradient-to-r from-red-600 to-red-700 text-white text-center font-bold py-2 px-4">
           <p className="whitespace-nowrap text-sm sm:text-base md:text-lg lg:text-xl">
-            Desconto só <span className="text-yellow-300">HOJE</span> nessa página
+            Desconto só <span className="neon-text">HOJE</span> nessa página
           </p>
         </div>
       </header>
@@ -146,16 +158,16 @@ const Home = () => {
       {/* Main Content */}
       <main className="flex-1">
         {/* Hero Section */}
-        <section className="text-center pt-12 bg-gray-900 pb-2">
+        <section className="text-center pt-12 bg-black pb-2">
           <h1 className="text-3xl sm:text-4xl font-bold tracking-tighter leading-none mb-2 text-white">
             Tenha o poder do<br />
-            <span className="text-green-400">GPT-5 PRO</span> <span className="text-white">na</span><br />
+            <span className="neon-text">GPT-5 PRO</span> <span className="text-white">na</span><br />
             palma da sua mão!
           </h1>
         </section>
 
         {/* Video Section */}
-        <section className="px-4 pt-8 bg-gray-900">
+        <section className="px-4 pt-8 bg-black">
           <div className="w-full max-w-sm mx-auto rounded-lg overflow-hidden shadow-2xl">
             <wistia-player 
               media-id="1k4qnksz3u" 
@@ -167,21 +179,21 @@ const Home = () => {
         </section>
 
         {/* Subtitle */}
-        <section className="text-center py-4 px-4 max-w-3xl mx-auto bg-gray-900">
+        <section className="text-center py-4 px-4 max-w-3xl mx-auto bg-black">
           <h2 className="text-lg md:text-xl leading-snug font-normal text-white">
             Chega de espera! Agora você<br />
             tem respostas imediatas com<br />
             mais precisão e profundidade!<br />
-            <span className="text-green-400 font-bold text-2xl">A partir de R$19,90</span>
+            <span className="neon-text font-bold text-2xl">A partir de R$19,90</span>
           </h2>
         </section>
 
         {/* Problem Section */}
-        <section className="py-16 sm:py-24 px-4 bg-gray-800">
+        <section className="py-16 sm:py-24 px-4 bg-black">
           <div className="container mx-auto max-w-5xl">
             <h2 className="text-3xl md:text-4xl font-bold text-center mb-4 uppercase text-white">
               O GPT-5 PRO<br />
-              <span className="text-green-500">É PARA VOCÊ QUE:</span>
+              <span className="neon-text">É PARA VOCÊ QUE:</span>
             </h2>
             
             <div className="flex flex-col md:flex-row md:gap-12 items-center">
@@ -189,7 +201,7 @@ const Home = () => {
                 <img
                   src="/images/01.webp"
                   alt="Pessoa frustrada com computador"
-                  className="rounded-lg mb-8 md:mb-0 mx-auto shadow-lg"
+                  className="rounded-lg mb-8 md:mb-0 mx-auto shadow-lg border border-green-500/20"
                   width="500"
                   height="500"
                 />
@@ -197,25 +209,25 @@ const Home = () => {
               
               <ul className="space-y-4 w-full md:w-1/2 text-base">
                 <li className="flex items-start gap-3">
-                  <TriangleAlert className="h-6 w-6 text-red-500 flex-shrink-0 mt-1" />
+                  <TriangleAlert className="h-6 w-6 text-red-500 flex-shrink-0 mt-1 icon-glow" />
                   <span className="text-gray-300">
                     <span className="text-red-400 font-semibold">Fica frustrado</span> com a lentidão ou indisponibilidade do serviço gratuito.
                   </span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <TriangleAlert className="h-6 w-6 text-red-500 flex-shrink-0 mt-1" />
+                  <TriangleAlert className="h-6 w-6 text-red-500 flex-shrink-0 mt-1 icon-glow" />
                   <span className="text-gray-300">
                     <span className="text-red-400 font-semibold">Recebe respostas rasas</span> que não atendem suas necessidades.
                   </span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <TriangleAlert className="h-6 w-6 text-red-500 flex-shrink-0 mt-1" />
+                  <TriangleAlert className="h-6 w-6 text-red-500 flex-shrink-0 mt-1 icon-glow" />
                   <span className="text-gray-300">
                     <span className="text-red-400 font-semibold">Perde tempo</span> (e <span className="text-red-400 font-semibold">dinheiro</span>) procurando soluções alternativas.
                   </span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <TriangleAlert className="h-6 w-6 text-red-500 flex-shrink-0 mt-1" />
+                  <TriangleAlert className="h-6 w-6 text-red-500 flex-shrink-0 mt-1 icon-glow" />
                   <span className="text-gray-300">
                     <span className="text-red-400 font-semibold">Lida com interrupções</span> nos seus fluxos de trabalho por limitações da versão básica.
                   </span>
@@ -226,41 +238,41 @@ const Home = () => {
         </section>
 
         {/* Benefits Section */}
-        <section className="py-8 sm:py-12 px-4 bg-gray-900">
+        <section className="py-8 sm:py-12 px-4 bg-black">
           <div className="container mx-auto max-w-5xl">
-            <h2 className="text-lg md:text-xl font-bold text-center mb-6 uppercase text-green-400">
+            <h2 className="text-lg md:text-xl font-bold text-center mb-6 uppercase neon-text">
               Com o GPT-5 Pro você ganha:
             </h2>
             
             <div className="grid md:grid-cols-2 gap-6">
-              <div className="flex items-start gap-4">
-                <Zap className="h-8 w-8 text-green-400 flex-shrink-0 mt-1" />
+              <div className="futuristic-card flex items-start gap-4 p-6 rounded-lg">
+                <Zap className="h-8 w-8 icon-glow flex-shrink-0 mt-1" />
                 <div>
-                  <h3 className="text-md font-bold text-green-400 mb-1">Acesso Imediato e Sem Filas</h3>
+                  <h3 className="text-md font-bold neon-text mb-1">Acesso Imediato e Sem Filas</h3>
                   <p className="text-sm text-gray-300">Use o serviço sem atrasos, sempre que precisar.</p>
                 </div>
               </div>
               
-              <div className="flex items-start gap-4">
-                <BrainCircuit className="h-8 w-8 text-green-400 flex-shrink-0 mt-1" />
+              <div className="futuristic-card flex items-start gap-4 p-6 rounded-lg">
+                <BrainCircuit className="h-8 w-8 icon-glow flex-shrink-0 mt-1" />
                 <div>
-                  <h3 className="text-md font-bold text-green-400 mb-1">Respostas Rápidas e Precisas</h3>
+                  <h3 className="text-md font-bold neon-text mb-1">Respostas Rápidas e Precisas</h3>
                   <p className="text-sm text-gray-300">Otimize seu tempo com o processamento em tempo real do GPT-5.</p>
                 </div>
               </div>
               
-              <div className="flex items-start gap-4">
-                <Star className="h-8 w-8 text-green-400 flex-shrink-0 mt-1" />
+              <div className="futuristic-card flex items-start gap-4 p-6 rounded-lg">
+                <Star className="h-8 w-8 icon-glow flex-shrink-0 mt-1" />
                 <div>
-                  <h3 className="text-md font-bold text-green-400 mb-1">Recursos Avançados</h3>
+                  <h3 className="text-md font-bold neon-text mb-1">Recursos Avançados</h3>
                   <p className="text-sm text-gray-300">Tenha acesso a funcionalidades exclusivas para tarefas complexas.</p>
                 </div>
               </div>
               
-              <div className="flex items-start gap-4">
-                <Briefcase className="h-8 w-8 text-green-400 flex-shrink-0 mt-1" />
+              <div className="futuristic-card flex items-start gap-4 p-6 rounded-lg">
+                <Briefcase className="h-8 w-8 icon-glow flex-shrink-0 mt-1" />
                 <div>
-                  <h3 className="text-md font-bold text-green-400 mb-1">Flexibilidade Total</h3>
+                  <h3 className="text-md font-bold neon-text mb-1">Flexibilidade Total</h3>
                   <p className="text-sm text-gray-300">Ideal para profissionais, estudantes e empresas que precisam de mais poder.</p>
                 </div>
               </div>
