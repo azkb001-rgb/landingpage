@@ -58,8 +58,8 @@ async def get_status_checks():
 app.include_router(api_router)
 
 # Mount static files
-app.mount("/images", StaticFiles(directory="images"), name="images")
-app.mount("/js", StaticFiles(directory="js"), name="js")
+app.mount("/images", StaticFiles(directory="../images"), name="images")
+app.mount("/js", StaticFiles(directory="../js"), name="js")
 
 # Serve the main index.html
 @app.get("/")
