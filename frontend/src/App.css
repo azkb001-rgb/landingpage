@@ -184,6 +184,18 @@ body {
   box-shadow: 0 4px 15px rgba(0, 255, 136, 0.3);
 }
 
+.notification-text {
+  text-shadow: 
+    -1px -1px 0 #000,
+     1px -1px 0 #000,
+    -1px  1px 0 #000,
+     1px  1px 0 #000,
+    -1px  0px 0 #000,
+     1px  0px 0 #000,
+     0px -1px 0 #000,
+     0px  1px 0 #000;
+}
+
 @keyframes slideInFromLeft {
   from {
     transform: translateX(-100%);
