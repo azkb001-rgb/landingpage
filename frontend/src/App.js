@@ -281,7 +281,7 @@ const Home = () => {
         </section>
 
         {/* Testimonials Section */}
-        <section className="pt-8 sm:pt-12 px-4 bg-gray-800">
+        <section className="pt-8 sm:pt-12 px-4 bg-black">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-4 uppercase text-white">
             DEPOIMENTOS
           </h2>
@@ -298,7 +298,7 @@ const Home = () => {
                       <img
                         src={src}
                         alt={`Depoimento ${index + 1}`}
-                        className="rounded-lg shadow-lg w-full"
+                        className="rounded-lg shadow-lg w-full border border-green-500/30"
                         width="300"
                         height="600"
                       />
@@ -310,16 +310,16 @@ const Home = () => {
             
             <button
               onClick={prevTestimonial}
-              className="absolute h-8 w-8 rounded-full top-1/2 -translate-y-1/2 left-2 sm:left-[-50px] bg-gray-700 border border-green-500 text-green-500 hover:bg-green-500 hover:text-white flex items-center justify-center"
+              className="futuristic-btn absolute h-10 w-10 rounded-full top-1/2 -translate-y-1/2 left-2 sm:left-[-50px] flex items-center justify-center text-black"
             >
-              <ChevronLeft className="h-4 w-4" />
+              <ChevronLeft className="h-5 w-5" />
             </button>
             
             <button
               onClick={nextTestimonial}
-              className="absolute h-8 w-8 rounded-full top-1/2 -translate-y-1/2 right-2 sm:right-[-50px] bg-gray-700 border border-green-500 text-green-500 hover:bg-green-500 hover:text-white flex items-center justify-center"
+              className="futuristic-btn absolute h-10 w-10 rounded-full top-1/2 -translate-y-1/2 right-2 sm:right-[-50px] flex items-center justify-center text-black"
             >
-              <ChevronRight className="h-4 w-4" />
+              <ChevronRight className="h-5 w-5" />
             </button>
           </div>
           
@@ -331,20 +331,20 @@ const Home = () => {
             
             <div className="space-y-4">
               {faqData.map((faq, index) => (
-                <div key={index} className="border border-gray-600 rounded-lg overflow-hidden">
+                <div key={index} className="futuristic-card rounded-lg overflow-hidden">
                   <button
                     onClick={() => toggleFaq(index)}
-                    className="w-full px-6 py-4 text-left bg-gray-700 hover:bg-gray-600 flex justify-between items-center"
+                    className="w-full px-6 py-4 text-left hover:bg-gray-800/50 flex justify-between items-center transition-all duration-300"
                   >
                     <span className="font-semibold text-white">{faq.question}</span>
                     <ChevronDown 
-                      className={`h-5 w-5 text-green-400 transform transition-transform ${
+                      className={`h-5 w-5 icon-glow transform transition-transform ${
                         openFaq === index ? 'rotate-180' : ''
                       }`}
                     />
                   </button>
                   {openFaq === index && (
-                    <div className="px-6 py-4 bg-gray-800 text-gray-300">
+                    <div className="px-6 py-4 bg-black/30 text-gray-300 border-t border-green-500/20">
                       {faq.answer}
                     </div>
                   )}
