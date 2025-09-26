@@ -136,8 +136,8 @@ const Home = () => {
             className="notification-slide-in px-4 py-2 rounded-lg shadow-lg max-w-sm"
           >
             <div className="flex items-center gap-2">
-              <div className="w-2 h-2 bg-black rounded-full animate-pulse" />
-              <div className="text-sm font-semibold">
+              <div className="w-2 h-2 bg-white rounded-full animate-pulse" />
+              <div className="text-sm font-semibold text-white">
                 <strong>{notification.name}</strong> de <strong>{notification.state}</strong><br />
                 acabou de comprar <strong>{notification.product}</strong>
               </div>
