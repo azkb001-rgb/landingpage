@@ -57,6 +57,15 @@ async def get_status_checks():
 # Include the router in the main app
 app.include_router(api_router)
 
+# Mount static files
+app.mount("/images", StaticFiles(directory="images"), name="images")
+app.mount("/js", StaticFiles(directory="js"), name="js")
+
+# Serve the main index.html
+@app.get("/")
+async def serve_index():
+    return FileResponse("index.html")
+
 app.add_middleware(
     CORSMiddleware,
     allow_credentials=True,
