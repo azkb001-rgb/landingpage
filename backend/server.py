@@ -64,7 +64,7 @@ app.mount("/js", StaticFiles(directory="../js"), name="js")
 # Serve the main index.html
 @app.get("/")
 async def serve_index():
-    return FileResponse("index.html")
+    return FileResponse("../index.html")
 
 app.add_middleware(
     CORSMiddleware,
