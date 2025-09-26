@@ -136,7 +136,7 @@ const Home = () => {
             className="notification-slide-in px-4 py-2 rounded-lg shadow-lg max-w-sm"
           >
             <div className="flex items-center gap-2">
-              <div className="w-2 h-2 bg-white rounded-full animate-pulse" />
+              <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse shadow-sm" style={{boxShadow: '0 0 6px #00ff88'}} />
               <div className="text-sm font-semibold text-white notification-text">
                 <strong>{notification.name}</strong> de <strong>{notification.state}</strong><br />
                 acabou de comprar <strong>{notification.product}</strong>
